@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class TestPerson {
-/*
+
     public static void main(String[] args) throws NameUndefinedException, IncorrectAgeException {
         Scanner sc = new Scanner(System.in);
 
@@ -41,5 +41,5 @@ public class TestPerson {
 
     }
 
- */
+
 }

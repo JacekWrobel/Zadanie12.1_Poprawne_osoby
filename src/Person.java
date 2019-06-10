@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Person {
     private String firstName;
     private String lastName;
@@ -10,6 +12,10 @@ public class Person {
         this.pesel = pesel;
         this.age = age;
     }
+
+    public Person() {
+    }
+
 
     public String getFirstName() {
         return firstName;
@@ -47,6 +53,36 @@ public class Person {
     public String toString() {
         return firstName + " " + lastName + " " + pesel + " " + age + " ";
     }
+
+
+    Person askData() {
+        Scanner sc = new Scanner(System.in);
+        Person person = null;
+
+        String firstName = null;
+        System.out.println("Podaj swoje imię");
+        firstName = sc.nextLine();
+        if (firstName == null || firstName.length() < 2) throw new NameUndefinedException();
+
+        String lastName = null;
+        System.out.println("Podaj swoje nazwisko");
+        lastName = sc.nextLine();
+        if (firstName == null || firstName.length() < 2) throw new NameUndefinedException();
+
+        System.out.println("Podaj swoj pesel");
+        String pesel = sc.nextLine();
+
+        int age = 0;
+        System.out.println("Podaj swoj wiek");
+        age = sc.nextInt();
+        if (age <= 1) throw new IncorrectAgeException();
+
+        return new Person(firstName, lastName, pesel, age);
+    }
+
+
+
+
 /*
     void createNewPerson() {
         if (age <= 1) throw new IncorrectAgeException();
@@ -59,3 +95,4 @@ public class Person {
     }
  */
 }
+
