@@ -11,10 +11,12 @@ public class Person {
         this.lastName = lastName;
         this.pesel = pesel;
         this.age = age;
+
+        if (firstName == null || firstName.length() < 2) throw new NameUndefinedException();
+        if (lastName == null || lastName.length() < 2) throw new NameUndefinedException();
+        if (age <= 1) throw new IncorrectAgeException();
     }
 
-    public Person() {
-    }
 
 
     public String getFirstName() {
@@ -55,9 +57,10 @@ public class Person {
     }
 
 
+    /*
     Person askData() {
         Scanner sc = new Scanner(System.in);
-        Person person = null;
+       Person person = null;
 
         String firstName = null;
         System.out.println("Podaj swoje imię");
@@ -80,6 +83,8 @@ public class Person {
         return new Person(firstName, lastName, pesel, age);
     }
 
+
+ */
 
 
 

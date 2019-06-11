@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TestPerson4 {
+public class TestPerson4 {/*
     public static void main(String[] args) throws NameUndefinedException, IncorrectAgeException {
         Person perMethod = new Person();
         try {
@@ -42,6 +42,4 @@ public class TestPerson4 {
 
         }
         */
-    }
-
 }
