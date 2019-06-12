@@ -18,12 +18,12 @@ public class Person {
     }
 
 
-
     public String getFirstName() {
         return firstName;
     }
 
     public void setFirstName(String firstName) {
+        if (firstName == null || firstName.length() < 2) throw new NameUndefinedException();
         this.firstName = firstName;
     }
 
@@ -32,6 +32,7 @@ public class Person {
     }
 
     public void setLastName(String lastName) {
+        if (lastName == null || lastName.length() < 2) throw new NameUndefinedException();
         this.lastName = lastName;
     }
 
@@ -48,6 +49,7 @@ public class Person {
     }
 
     public void setAge(int age) {
+        if (age <= 1) throw new IncorrectAgeException();
         this.age = age;
     }
 
